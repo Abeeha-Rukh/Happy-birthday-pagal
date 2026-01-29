@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Hubza 🎀</title>
+<style>
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ff5f9e,#ff2e63);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:white;
+}
+.card{
+    background:rgba(0,0,0,0.25);
+    padding:30px;
+    border-radius:20px;
+    width:90%;
+    max-width:420px;
+    text-align:center;
+    box-shadow:0 0 25px rgba(0,0,0,0.3);
+}
+h1{
+    font-size:32px;
+    margin-bottom:20px;
+    color:#ffe6f0;
+}
+button{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    background:#ffccd5;
+    color:#b0003a;
+    font-weight:600;
+}
+button:hover{background:#fff;}
+.page{display:none;}
+.back{
+    background:#fff;
+    color:#ff2e63;
+}
+</style>
+</head>
+<body>
+
+<div class="card" id="home">
+    <h1>🎂 Happy Birthday Hubza 🎂</h1>
+    <button onclick="openPage('wish')">💖 Birthday Wishes</button>
+    <button onclick="openPage('love')">💌 How Much I Love You</button>
+    <button onclick="openPage('gift')">🎁 Gift Status</button>
+</div>
+
+<div class="card page" id="wish">
+    <h1>💖 My Wishes</h1>
+    <p>May Allah bless you with endless happiness, success, health and peace 🤍✨<br>
+    May all your dreams come true, always Ameen 🤲</p>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+</div>
+
+<div class="card page" id="love">
+    <h1>💌 For My Bestie</h1>
+    <p>I love you more than words can explain 💕<br>
+    You are my safe place, my happiness, my forever best friend 💫</p>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+</div>
+
+<div class="card page" id="gift">
+    <h1>🎁 Gift Update</h1>
+    <p>Your gift is pending 😌💝<br>
+    Because special people deserve special surprises ✨</p>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+</div>
+
+<script>
+function openPage(id){
+    document.getElementById('home').style.display='none';
+    document.querySelectorAll('.page').forEach(p=>p.style.display='none');
+    document.getElementById(id).style.display='block';
+}
+function goBack(){
+    document.querySelectorAll('.page').forEach(p=>p.style.display='none');
+    document.getElementById('home').style.display='block';
+}
+</script>
+
+</body>
+</html>
